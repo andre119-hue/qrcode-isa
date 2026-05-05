@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Para Isabella ❤️</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="hearts"></div>
+
+<div class="container-main">
+    <div class="wrapper">
+        <h1>Para Isabella ❤️</h1>
+
+        <div class="poema">
+    <pre>
+    Da estrela mais distante à mais próxima flor,
+    Você é, Isabella, um encanto escultural.
+    Entre as obras do céu, digo em amor,
+    Que és a mais perfeita, a sem igual.
+
+    Recordo, em silêncio, aquele instante,
+    Em que ousei meu afeto a ti revelar;
+    Teus olhos, sob a luz serena e vibrante,
+    Responderam mais do que eu pude falar.
+
+    Mais rara que o rubi, pura e formosa,
+    Ou que o lírio entre as rosas a brotar,
+    Não há nada que me encante mais que a ti.
+
+    E se um antigo rei cantou à mais bela,
+    Que em ti não há defeito a se achar,
+    Foi só para que eu dissesse: vejo isso em ti.
+    </pre>
+    </div>
+    </div>
+</div>
+
+<script>
+const container = document.querySelector('.hearts');
+
+for (let i = 0; i < 50; i++) {
+    const heart = document.createElement('span');
+    heart.innerHTML = '❤️';
+
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+    heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
+
+    container.appendChild(heart);
+}
+</script>
+
+</body>
+</body>
