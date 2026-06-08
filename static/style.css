@@ -1,0 +1,238 @@
+body {
+margin: 0;
+padding: 0;
+font-family: 'Georgia', serif;
+background: linear-gradient(to right, #d4a373, #faedcd);
+overflow-x: hidden;
+}
+
+/* LATERAIS FIXAS */
+.side {
+position: fixed;
+top: 0;
+width: 20%;
+height: 100%;
+overflow: hidden;
+z-index: 1;
+pointer-events: none;
+}
+
+.left {
+left: 0;
+}
+
+.right {
+right: 0;
+}
+
+/* ANIMAÇÃO DAS IMAGENS */
+.scroll {
+display: flex;
+flex-direction: column;
+height: 200%;
+animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+0% {
+transform: translateY(0);
+}
+
+```
+100% {
+    transform: translateY(-50%);
+}
+```
+
+}
+
+/* IMAGENS */
+.side img {
+display: block;
+width: 100%;
+max-height: 200px;
+object-fit: cover;
+margin: 12px 0;
+border-radius: 15px;
+}
+
+/* CONTEÚDO CENTRAL */
+.container-main {
+position: relative;
+z-index: 2;
+
+```
+width: 70%;
+margin: 60px auto;
+
+display: flex;
+justify-content: center;
+align-items: center;
+```
+
+}
+
+/* CAIXA DA CARTA */
+.wrapper {
+background: #fffaf0;
+color: #3b2f2f;
+
+```
+width: 100%;
+max-width: 850px;
+
+padding: 60px;
+
+border-radius: 12px;
+
+box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+```
+
+}
+
+/* TÍTULO */
+h1 {
+text-align: center;
+font-size: 48px;
+margin-bottom: 40px;
+color: #8b0000;
+}
+
+h2 {
+text-align: center;
+color: #8b0000;
+}
+
+/* TEXTO EM PROSA */
+.texto {
+text-align: justify;
+}
+
+.texto p {
+font-size: 20px;
+line-height: 1.9;
+margin-bottom: 25px;
+}
+
+/* INPUT */
+input {
+display: block;
+margin: 15px auto;
+
+```
+padding: 12px;
+
+width: 100%;
+max-width: 320px;
+
+border: none;
+border-radius: 10px;
+
+color: #333;
+```
+
+}
+
+/* BOTÃO */
+button {
+display: block;
+
+```
+margin: 15px auto;
+
+padding: 12px 30px;
+
+border: none;
+border-radius: 10px;
+
+background-color: #c1121f;
+
+color: white;
+font-weight: bold;
+
+cursor: pointer;
+
+transition: background-color 0.3s;
+```
+
+}
+
+button:hover {
+background-color: #9d0208;
+}
+
+/* FUNDO DE CORAÇÕES */
+.hearts {
+position: fixed;
+
+```
+top: 0;
+left: 0;
+
+width: 100%;
+height: 100%;
+
+overflow: hidden;
+
+z-index: 0;
+```
+
+}
+
+/* CORAÇÕES */
+.hearts span {
+position: absolute;
+display: block;
+
+```
+color: rgba(255, 255, 255, 0.7);
+
+font-size: 20px;
+
+animation: fall linear infinite;
+```
+
+}
+
+/* ANIMAÇÃO DOS CORAÇÕES */
+@keyframes fall {
+0% {
+transform: translateY(-10%);
+opacity: 1;
+}
+
+```
+100% {
+    transform: translateY(110vh);
+    opacity: 0;
+}
+```
+
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 900px) {
+
+```
+.side {
+    display: none;
+}
+
+.container-main {
+    width: 95%;
+}
+
+.wrapper {
+    padding: 35px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+.texto p {
+    font-size: 18px;
+}
+```
+
+}
