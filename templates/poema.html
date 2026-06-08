@@ -59,11 +59,17 @@ const container = document.querySelector('.hearts');
 
 for (let i = 0; i < 50; i++) {
     const heart = document.createElement('span');
+
     heart.innerHTML = '❤️';
 
     heart.style.left = Math.random() * 100 + 'vw';
     heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
-    heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
+
+    heart.style.animationDuration =
+        (Math.random() * 5 + 5) + 's';
+
+    heart.style.animationDelay =
+        (Math.random() * 10) + 's';
 
     container.appendChild(heart);
 }
