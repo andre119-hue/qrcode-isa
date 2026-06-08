@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* LATERAIS FIXAS */
+.side {
+    position: fixed;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none; /* evita interferência no centro */
+}
+
+.left { left: 0; }
+.right { right: 0; }
+
+/* CONTAINER DAS IMAGENS (ANIMAÇÃO) */
+.scroll {
+    display: flex;
+    flex-direction: column;
+    height: 200%;
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+}
+
+/* IMAGENS */
+.side img {
+    display: block;
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+
+    margin: 12px 0;
+    border-radius: 15px;
+}
+
+/* CONTEÚDO CENTRAL */
+.container-main {
+    position: relative;
+    z-index: 2;
+
+    width: 54%;
+    margin: 80px auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* WRAPPER INTERNO */
+.wrapper {
+    max-width: 500px;
+    width: 100%;
+}
+
+/* TÍTULO */
+h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-top: 0;
+}
+
+/* POEMA */
+.poema p {
+    margin-bottom: 25px;
+    line-height: 1.8;
+    font-size: 20px;
+}
+
+/* INPUT */
+input {
+    display: block;
+    margin: 10px auto;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 300px;
+    color: #333;
+}
+
+/* BOTÃO */
+button {
+    display: block;
+    margin: 15px auto;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff4b5c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.wrapper {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+
+button:hover {
+    background-color: #ff1e3c;
+}
+
+/* FUNDO DE CORAÇÕES */
+.hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+/* CORAÇÕES INDIVIDUAIS */
+.hearts span {
+    position: absolute;
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 20px;
+    animation: fall linear infinite;
+}
+
+/* ANIMAÇÃO */
+@keyframes fall {
+    0% {
+        transform: translateY(-10%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+}
